@@ -6,7 +6,7 @@ import com.betrybe.agrix.security.Role;
 /**
  * The type Person creation dto.
  */
-public record PersonCreationDto(String username, String password, Role role) {
+public record PersonCreationDto(String username, String password, String role) {
 
   /**
    * To entity person.
@@ -17,7 +17,7 @@ public record PersonCreationDto(String username, String password, Role role) {
     return new Person(
         username,
         password,
-        Role.valueOf(String.valueOf(role))
+        role
     );
   }
 }
