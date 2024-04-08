@@ -5,6 +5,7 @@ import com.betrybe.agrix.exception.FertilizerNotFoundException;
 import com.betrybe.agrix.repository.FertilizerRepository;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.stereotype.Service;
 
 /**
@@ -34,6 +35,7 @@ public class FertilizerService {
     return fertilizerRepository.save(fertilizer);
   }
 
+  @PreAuthorize("hasAuthority('ADMIN')")
   public List<Fertilizer> getAllFertilizers() {
     return fertilizerRepository.findAll();
   }
