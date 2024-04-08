@@ -1,4 +1,4 @@
-package com.betrybe.agrix.ebytr.staff.exception;
+package com.betrybe.agrix.exception;
 
 /**
  * Exception for when a person is not found.
