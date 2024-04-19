@@ -60,6 +60,13 @@ public class FertilizerController {
         .toList();
   }
 
+  /**
+   * Gets fertilizer by id.
+   *
+   * @param fertilizerId the fertilizer id
+   * @return the fertilizer by id
+   * @throws FertilizerNotFoundException the fertilizer not found exception
+   */
   @GetMapping("/{fertilizerId}")
   public FertilizerDto getFertilizerById(@PathVariable Integer fertilizerId)
       throws FertilizerNotFoundException {
